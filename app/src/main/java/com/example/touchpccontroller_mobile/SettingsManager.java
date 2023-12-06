@@ -37,6 +37,14 @@ public class SettingsManager {
     public static Settings loadSettings(Context context) {
         SharedPreferences preferences = context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
 
+        boolean isFirstInstall = preferences.getBoolean("isFirstInstall", true);
+        if (isFirstInstall) {
+            clearSettings(context);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("isFirstInstall", false);
+            editor.apply();
+        }
+
         String ip = preferences.getString("ip", "255.255.255.255");
         int port = preferences.getInt("port", 12345);
         int screenWidth = preferences.getInt("screenWidth", 1920);
