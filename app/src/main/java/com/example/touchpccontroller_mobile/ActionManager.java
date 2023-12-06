@@ -124,6 +124,8 @@ public class ActionManager {
         this.startY = yPos;
         this.isScrolling = false;
         this.isMoving = false;
+        this.currentX = 0; // Réinitialiser les coordonnées actuelles à 0
+        this.currentY = 0;
     }
 
     /**
@@ -138,13 +140,15 @@ public class ActionManager {
 
         this.isMoving = true;
 
-        // Calcule le déplacement par rapport aux coordonnées de départ.
         float deltaX = xPos - this.startX;
         float deltaY = yPos - this.startY;
 
         // Applique la sensibilité au déplacement.
-        deltaX *= sensitivity;
-        deltaY *= sensitivity;
+        //deltaX *= (sensitivity / 10);
+        //deltaY *= (sensitivity / 10);
+        Log.d("MOVE", "xPos = " +  xPos);
+        Log.d("MOVE", "startX = " +  startX);
+        Log.d("MOVE", "deltaX = " +  deltaX);
 
         // Met à jour les coordonnées de départ pour le prochain déplacement.
         this.startX = xPos;
@@ -154,9 +158,8 @@ public class ActionManager {
         this.currentX += deltaX;
         this.currentY += deltaY;
 
-        // Verifie les limites de l'écran.
-        this.currentX = Math.min(screenWidth, Math.max(0, this.currentX));
-        this.currentY = Math.min(screenHeight, Math.max(0, this.currentY));
+        this.currentX *= (sensitivity/10);
+        this.currentY *= (sensitivity/10);
 
         // Crée un objet JSON pour les coordonnées et envoie les données.
         JSONObject json = new JSONObject();
@@ -165,6 +168,12 @@ public class ActionManager {
         try {
             coords.put("x", this.currentX);
             coords.put("y", this.currentY);
+
+            Log.d("MOVE", "x = " +  currentX);
+            Log.d("MOVE", "y = " +  currentY);
+
+
+            Log.d("MOVE", "y ============================= ");
 
             json.put("action", "MouseMove");
             json.put("coords", coords);

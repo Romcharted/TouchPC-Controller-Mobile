@@ -81,71 +81,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/screenWidthLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/portLayout">
-
-            <TextView
-                android:id="@+id/labelScreenWidth"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/screen_width"
-                android:textColor="@color/text"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/inputScreenWidth"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:backgroundTint="@color/text"
-                android:ems="10"
-                android:inputType="number"
-                android:text="1920"
-                android:textColor="@color/text"
-                android:textCursorDrawable="@color/primary" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/screenHeightLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/screenWidthLayout">
-
-            <TextView
-                android:id="@+id/LabelScreenHeight"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/screen_height"
-                android:textColor="@color/text"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/InputScreenHeight"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:backgroundTint="@color/text"
-                android:ems="10"
-                android:inputType="number"
-                android:text="1080"
-                android:textColor="@color/text"
-                android:textCursorDrawable="@color/primary" />
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/sensitivityLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/screenHeightLayout">
+            app:layout_constraintTop_toBottomOf="@+id/portLayout">
 
             <TextView
                 android:id="@+id/labelSensitivity"

@@ -22,8 +22,6 @@ public class SettingsManager {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("ip", settings.getIp());
         editor.putInt("port", settings.getPort());
-        editor.putInt("screenWidth", settings.getScreenWidth());
-        editor.putInt("screenHeight", settings.getScreenHeight());
         editor.putFloat("sensitivity", settings.getSensitivity());
         editor.apply();
     }
@@ -47,11 +45,9 @@ public class SettingsManager {
 
         String ip = preferences.getString("ip", "255.255.255.255");
         int port = preferences.getInt("port", 12345);
-        int screenWidth = preferences.getInt("screenWidth", 1920);
-        int screenHeight = preferences.getInt("screenHeight", 1080);
-        float sensitivity = preferences.getFloat("sensitivity", 10.0f);
+        float sensitivity = preferences.getFloat("sensitivity", 50.0f);
 
-        return new Settings(ip, port, screenWidth, screenHeight, sensitivity);
+        return new Settings(ip, port, sensitivity);
     }
 
 

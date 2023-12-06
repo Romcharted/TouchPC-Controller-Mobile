@@ -116,8 +116,6 @@ public class MainFragment extends Fragment {
         Settings settings = SettingsManager.loadSettings(requireContext());
 
         // Appliquer les données à l'ActionManager
-        actionManager.setScreenWidth(settings.getScreenWidth());
-        actionManager.setScreenHeight(settings.getScreenHeight());
         actionManager.setSensitivity(settings.getSensitivity());
 
         // Appliquer l'adresse IP à la configuration du serveur

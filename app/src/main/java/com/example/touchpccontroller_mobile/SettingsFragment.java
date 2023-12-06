@@ -23,7 +23,7 @@ import com.example.touchpccontroller_mobile.server.ServerConfig;
  */
 public class SettingsFragment extends Fragment {
     private ActionManager actionManager;
-    private EditText inputTextIP, inputPort, inputScreenWidth, inputScreenHeight, inputSensitivity;
+    private EditText inputTextIP, inputPort, inputSensitivity;
 
     /**
      * Constructeur par défaut pour SettingsFragment.
@@ -56,8 +56,6 @@ public class SettingsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
         inputTextIP = view.findViewById(R.id.inputTextIP);
         inputPort = view.findViewById(R.id.inputPort);
-        inputScreenWidth = view.findViewById(R.id.inputScreenWidth);
-        inputScreenHeight = view.findViewById(R.id.InputScreenHeight);
         inputSensitivity = view.findViewById(R.id.inputSensitivity);
         Button btnSave = view.findViewById(R.id.btnSave);
 
@@ -68,8 +66,6 @@ public class SettingsFragment extends Fragment {
         Settings settings = SettingsManager.loadSettings(requireContext());
         inputTextIP.setText(settings.getIp());
         inputPort.setText(String.valueOf(settings.getPort()));
-        inputScreenWidth.setText(String.valueOf(settings.getScreenWidth()));
-        inputScreenHeight.setText(String.valueOf(settings.getScreenHeight()));
         inputSensitivity.setText(String.valueOf(settings.getSensitivity()));
 
         // Filtre d'entrée pour l'adresse IP
@@ -92,8 +88,6 @@ public class SettingsFragment extends Fragment {
         Settings settings = new Settings(
                 inputTextIP.getText().toString(),
                 Integer.parseInt(String.valueOf(inputPort.getText())),
-                Integer.parseInt(String.valueOf(inputScreenWidth.getText())),
-                Integer.parseInt(String.valueOf(inputScreenHeight.getText())),
                 Float.parseFloat(String.valueOf(inputSensitivity.getText()))
         );
         SettingsManager.saveSettings(requireContext(), settings);
@@ -110,8 +104,6 @@ public class SettingsFragment extends Fragment {
      */
     private void updateActionManagerAndServerConfig() {
         // Met à jour l'ActionManager avec les nouvelles valeurs configurées
-        actionManager.setScreenWidth(Integer.parseInt(String.valueOf(inputScreenWidth.getText())));
-        actionManager.setScreenHeight(Integer.parseInt(String.valueOf(inputScreenHeight.getText())));
         actionManager.setSensitivity(Float.parseFloat(String.valueOf(inputSensitivity.getText())));
 
         // Met à jour la configuration du serveur avec la nouvelle adresse IP configurée

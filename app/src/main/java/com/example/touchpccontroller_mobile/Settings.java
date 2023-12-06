@@ -8,25 +8,18 @@ public class Settings {
 
     private String ip;
     private int port;
-    private int screenWidth;
-    private int screenHeight;
     private float sensitivity;
-    private boolean useLocalIP;
 
     /**
      * Constructeur de la classe Settings.
      *
      * @param ip          Adresse IP du serveur.
      * @param port        Port de communication avec le serveur.
-     * @param screenWidth Largeur de l'écran de l'appareil.
-     * @param screenHeight Hauteur de l'écran de l'appareil.
      * @param sensitivity Sensibilité pour les actions de l'utilisateur.
      */
-    public Settings(String ip, int port, int screenWidth, int screenHeight, float sensitivity) {
+    public Settings(String ip, int port, float sensitivity) {
         this.ip = ip;
         this.port = port;
-        this.screenWidth = screenWidth;
-        this.screenHeight = screenHeight;
         this.sensitivity = sensitivity;
     }
 
@@ -65,42 +58,6 @@ public class Settings {
      */
     public void setPort(int port) {
         this.port = port;
-    }
-
-    /**
-     * Obtient la largeur de l'écran de l'appareil.
-     *
-     * @return Largeur de l'écran de l'appareil.
-     */
-    public int getScreenWidth() {
-        return screenWidth;
-    }
-
-    /**
-     * Modifie la largeur de l'écran de l'appareil.
-     *
-     * @param screenWidth Nouvelle largeur de l'écran de l'appareil.
-     */
-    public void setScreenWidth(int screenWidth) {
-        this.screenWidth = screenWidth;
-    }
-
-    /**
-     * Obtient la hauteur de l'écran de l'appareil.
-     *
-     * @return Hauteur de l'écran de l'appareil.
-     */
-    public int getScreenHeight() {
-        return screenHeight;
-    }
-
-    /**
-     * Modifie la hauteur de l'écran de l'appareil.
-     *
-     * @param screenHeight Nouvelle hauteur de l'écran de l'appareil.
-     */
-    public void setScreenHeight(int screenHeight) {
-        this.screenHeight = screenHeight;
     }
 
     /**

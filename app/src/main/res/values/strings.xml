@@ -26,8 +26,6 @@
     <string name="save">Save</string>
     <string name="ip_text">"IP "</string>
     <string name="port">Port</string>
-    <string name="screen_width">Screen width</string>
-    <string name="screen_height">Screen Height</string>
     <string name="sensibility">Sensibility</string>
     <string name="saved_settings">Saved settings</string>
     <string name="local_ip_error">Local IP error</string>
