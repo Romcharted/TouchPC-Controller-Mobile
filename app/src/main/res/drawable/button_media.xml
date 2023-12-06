@@ -1,0 +1,15 @@
+<!-- res/drawable/button_media.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- État pressé -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/secondary" />
+        </shape>
+    </item>
+    <!-- État normal -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/text" />
+        </shape>
+    </item>
+</selector>

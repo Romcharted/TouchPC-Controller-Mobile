@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">TouchPC Controller</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Preference Titles -->
+    <string name="messages_header" translatable="false">Messages</string>
+    <string name="sync_header" translatable="false">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title" translatable="false">Your signature</string>
+    <string name="reply_title" translatable="false">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title" translatable="false">Sync email periodically</string>
+    <string name="attachment_title" translatable="false">Download incoming attachments</string>
+    <string name="attachment_summary_on" translatable="false">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off" translatable="false">Only download attachments when manually requested</string>
+    <string name="controller">Controller</string>
+    <string name="left">left</string>
+    <string name="right">Right</string>
+    <string name="open_keyboard">Open Keyboard</string>
+    <string name="media">Media</string>
+    <string name="settings">Settings</string>
+    <string name="save">Save</string>
+    <string name="ip_text">"IP "</string>
+    <string name="port">Port</string>
+    <string name="screen_width">Screen width</string>
+    <string name="screen_height">Screen Height</string>
+    <string name="sensibility">Sensibility</string>
+    <string name="saved_settings">Saved settings</string>
+    <string name="local_ip_error">Local IP error</string>
+    <string name="local_ip_error_text">Unable to retrieve automatic local IP address.</string>
+</resources>

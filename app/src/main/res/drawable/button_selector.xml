@@ -1,0 +1,42 @@
+<!-- res/drawable/button_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- État pressé -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/colorForBackground" />
+        </shape>
+    </item>
+    <!-- État normal -->
+    <item>
+        <layer-list>
+            <!-- Fond du bouton -->
+            <item>
+                <shape>
+                    <solid android:color="@color/primary" />
+                    <!-- Bordure globale -->
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/colorForBackground" />
+                </shape>
+            </item>
+            <!-- Bordure gauche -->
+            <item android:left="2dp">
+                <shape>
+                    <solid android:color="@android:color/transparent" />
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/colorForBackground" />
+                </shape>
+            </item>
+            <!-- Bordure droite -->
+            <item android:right="2dp">
+                <shape>
+                    <solid android:color="@android:color/transparent" />
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/colorForBackground" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

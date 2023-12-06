@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TouchPCController-Mobile</string>
+    <string name="controller">Controlleur</string>
+    <string name="left">Gauche</string>
+    <string name="right">Droit</string>
+    <string name="open_keyboard">Ouvrir le clavier</string>
+    <string name="media">Média</string>
+    <string name="settings">Paramètre</string>
+    <string name="save">Sauvegarder</string>
+    <string name="ip_text">IP</string>
+    <string name="port">Port :</string>
+    <string name="screen_width">Largeur d\'écran</string>
+    <string name="screen_height">Hauteur d\'écran</string>
+    <string name="sensibility">Sensibilité</string>
+    <string name="saved_settings">Paramètres enregistrés</string>
+    <string name="local_ip_error">Erreur IP locale</string>
+    <string name="local_ip_error_text">Impossible de récupérer l\'adresse IP locale automatique.</string>
+</resources>
