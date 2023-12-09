@@ -22,7 +22,7 @@ Retrouvez [ici le répertoire pour l'application PC](https://github.com/romainso
 
 1. Téléchargez [ici](https://github.com/romainsonnetpro/TouchPC-Controller/releases) la version PC et dézipper la.
 2. Lancer le `TouchPC Controller.exe`.
-3. Téléchargez l'application mobile [TouchPC Controller Mobile](https://github.com/romainsonnetpro/TouchPC-Controller-Mobile).
+3. Téléchargez l'application mobile [TouchPC Controller Mobile]([https://github.com/romainsonnetpro/TouchPC-Controller-Mobile](https://github.com/romainsonnetpro/TouchPC-Controller-Mobile/releases/tag/Release-V1)).
 4. Lancer l'APK sur votre mobile.
 5. Connectez votre appareil mobile et votre ordinateur au même réseau Wi-Fi.
 6. Recopiez, dans la partie paramètre de l'application mobile, l'IP visible sur l'application PC et sauvegardez.
